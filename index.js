@@ -50,6 +50,22 @@ app.get('/imgur', async (req, res) => {
   }
 });
 
+app.get('/imgbb', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) return res.status(400).json({ error: 'Missing url query parameter' });
+
+    const imgbbResponse = await axios.get(`https://itz.aryan-error-apis.rf.gd/imbb?link=${encodeURIComponent(url)}`);
+
+    res.json({
+      success: true,
+      link: imgbbResponse.data.link
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to upload image to Imgur', details: error.message });
+  }
+});
+
 app.listen(port, () => {
   console.log(`API is running at http://localhost:${port}`);
 });
