@@ -53,7 +53,7 @@ GET /alldl?url=https://example.com/video
 
 #### Example Request:
 ```bash
-GET /imgur?link= Image Video GPG PNG URL
+GET /imgur?link= Image Video JPG PNG URL
 ```
 
 #### Example Response:
