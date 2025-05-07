@@ -7,7 +7,7 @@
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "ArYAN",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.0",
